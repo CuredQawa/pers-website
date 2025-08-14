@@ -20,3 +20,20 @@
 - Nothing
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.0.1] - 2025-08-14
+
+### Added
+
+- 添加a/b/c-*.html,更新了内链
+- 设置了shoutcut icon
+
+### Changed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
