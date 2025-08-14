@@ -69,3 +69,19 @@
 - vercel.json的一点小问题
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.1.2] - 2025-08-14
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Nothing
+
+### Fixed
+
+- vercel.json的一点小问题
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
