@@ -85,3 +85,19 @@
 - vercel.json的一点小问题
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.1.3] - 2025-08-14
+
+### Added
+
+- Tools-抽号器
+
+### Changed
+
+- s-navbar.html中增加了抽号器的外链
+
+### Fixed
+
+- Nothing
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->

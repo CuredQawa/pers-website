@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>随机抽号器</title>
+    <link rel="shortcut icon" href="../img/ran-num-pick/shortcut.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #result {
+            font-size: larger;
+            margin-bottom: 10px;
+        }
+
+        #history {
+            color: grey;
+            height: 200px;
+            max-height: 200px;
+            overflow-y: scroll;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #themeToggle {
+            position: fixed;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #454545;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode #main {
+            background-color: #444;
+            border: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .dark-mode #history {
+            border-color: #555;
+            color: #ccc;
+        }
+
+        .dark-mode #themeToggle {
+            background-color: #FFC107;
+        }
+
+        .cant-select{
+            user-select: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <label for="startNumber" class="cant-select">起始号码：</label>
+        <input type="text" id="startNumber" value="1"><br>
+
+        <label for="endNumber" class="cant-select">末尾号码：</label>
+        <input type="text" id="endNumber" value="53"><br>
+
+        <label for="quantity" class="cant-select">抽取数量：</label>
+        <input type="text" id="quantity" value="1"><br>
+
+        <label for="allowRepeat" title="一次性抽取多个时允许重复" class="cant-select">允许重复：</label>
+        <input type="checkbox" id="allowRepeat"><br>
+
+        <button onclick="pickNumbers()">抽取号码</button>
+        <button onclick="clearBoard()">清除面板</button>
+
+        <div id="result" class="cant-select"></div>
+        <div id="history"></div>
+    </div>
+    <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+    <script>
+        var historyResults = [];
+        var isDarkMode = false;
+
+        function pickNumbers() {
+            var startNumber = document.getElementById("startNumber").value;
+            var endNumber = document.getElementById("endNumber").value;
+            var quantity = document.getElementById("quantity").value;
+            var allowRepeat = document.getElementById("allowRepeat").checked;
+            var result = document.getElementById("result");
+
+            // 检查输入是否为数字
+            if (!isNumeric(startNumber) || !isNumeric(endNumber) || !isNumeric(quantity)) {
+                result.innerHTML = "请输入有效的数字！";
+                return;
+            }
+
+            startNumber = parseInt(startNumber);
+            endNumber = parseInt(endNumber);
+            quantity = parseInt(quantity);
+
+            if (startNumber >= endNumber) {
+                result.innerHTML = "就不能正正经经抽号吗，找茬是不是，起始号比结束号还大？";
+                return;
+            }
+
+            if (quantity <= 0) {
+                result.innerHTML = "暂时不支持抽负数个号码哦qwq";
+                return;
+            }
+
+            if (allowRepeat == false && (endNumber - startNumber + 1) < quantity) {
+                result.innerHTML = "我说， " + (endNumber - startNumber + 1) + " 个里面抽 " + quantity + " 个还不允许重复，天王老子来了都抽不出来";
+                return;
+            }
+
+            var pickedNumbers = [];
+            for (var i = 0; i < quantity; i++) {
+                var num = Math.floor(Math.random() * (endNumber - startNumber + 1)) + startNumber;
+                if (!allowRepeat && pickedNumbers.includes(num)) {
+                    i--; // 重新抽取
+                } else {
+                    pickedNumbers.push(num);
+                    historyResults.push(num);
+                }
+            }
+
+            result.innerHTML = "抽取结果：" + pickedNumbers.join(" / ");
+            showHistory();
+        }
+
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+
+        function showHistory() {
+            var history = document.getElementById("history");
+            history.innerHTML = "历史结果：<br>";
+            for (var i = 0; i < historyResults.length; i++) {
+                if (i > 0 && i % 7 == 0) {
+                    history.innerHTML += "   ";
+                }
+                history.innerHTML += historyResults[i] + " / ";
+                if (i % 7 == 6) {
+                    history.innerHTML += "<br>";
+                }
+            }
+        }
+
+        function clearBoard() {
+            historyResults = [];
+            document.getElementById("result").innerHTML = "";
+            showHistory();
+        }
+
+        function toggleTheme() {
+            var body = document.body;
+            var themeToggle = document.getElementById("themeToggle");
+
+            if (!isDarkMode) {
+                body.classList.add("dark-mode");
+                themeToggle.innerHTML = "☀️";
+            } else {
+                body.classList.remove("dark-mode");
+                themeToggle.innerHTML = "🌙";
+            }
+
+            isDarkMode = !isDarkMode;
+        }
+
+        showHistory(); // 默认显示历史结果
+    </script>
+</body>
+
+</html>
