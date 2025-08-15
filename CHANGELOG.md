@@ -102,7 +102,7 @@
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
 
-## [1.1.4] - 2025-08-15
+## [1.1.5] - 2025-08-15
 
 ### Added
 
@@ -110,10 +110,10 @@
 
 ### Changed
 
-- Web开发页修改
+- Web开发页内容填充
 
 ### Fixed
 
-- 补上了抽号器的lang="zh"
+- Web开发页滚动导航栏显示错误问题
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
