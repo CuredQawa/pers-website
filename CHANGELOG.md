@@ -86,7 +86,7 @@
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
 
-## [1.1.3] - 2025-08-14
+## [1.1.3] - 2025-08-15
 
 ### Added
 
@@ -99,5 +99,21 @@
 ### Fixed
 
 - Nothing
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.1.4] - 2025-08-15
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Web开发页修改
+
+### Fixed
+
+- 补上了抽号器的lang="zh"
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
