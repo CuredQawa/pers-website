@@ -36,5 +36,89 @@ main{
     align-items: center;
     margin-top: 10vh;
     width: 100%;
+    /* height: 80vh; */
+}
+.is-sub-title{
+    font-size: 3vw;
+    font-weight: 900;
+    user-select: none;
+}
+.box-hover-open{
+    /* background-color: rgb(175, 255, 255); */
+    width: 100%;
+    height: 20vh;
+    /* transition: all 0.5s; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-h-o-bg-top{
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 10vh;
+    margin-top: -10vh;
+    transition: all 0.3s;
+}
+.box-h-o-bg-bottom{
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 10vh;
+    margin-bottom: -10vh;
+    transition: all 0.3s;
+}
+.box-hover-open:hover .box-h-o-bg-top{
+    margin-top: 0;
+}
+.box-hover-open:hover .box-h-o-bg-bottom{
+    margin-bottom: 0;
+}
+
+
+/* 视差展示图区域 */
+.parallax{
+    width: 100%;
     height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    user-select: none;
+    /* z-index: -20; */
+}
+.pall{
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p1{background-image: url(../img/home/p1.JPG);}
+.p2{background-image: url(../img/home/p2.JPG);}
+.p3{background-image: url(../img/home/p3.png);}
+.p4{background-image: url(../img/home/p4.png);}
+
+.is-large{
+    font-size: 10vw;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+.is-gray{
+    background-color: rgb(100, 100, 100, 0.8);
+    border-radius: 2vw;
+}
+.between-parallax-content{
+    margin: 0;
+    width: 100%;
+    /* height: 20vh; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    font-size: 13vh;
+    font-weight: 800;
 }

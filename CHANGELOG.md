@@ -134,3 +134,20 @@
 - Nothing
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.1.7] - 2025-08-16
+
+### Added
+
+- 首页的内容（补全了第二个section，包括简介和图文）
+
+### Changed
+
+- home.html
+- p1 p2 p3 p4
+
+### Fixed
+
+- Nothing
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
