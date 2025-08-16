@@ -117,3 +117,20 @@
 - Web开发页滚动导航栏显示错误问题
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
+
+## [1.1.6] - 2025-08-16
+
+### Added
+
+- 首页的内容（只做了两个section）
+
+### Changed
+
+- home.html
+- me.png
+
+### Fixed
+
+- Nothing
+
+<!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
