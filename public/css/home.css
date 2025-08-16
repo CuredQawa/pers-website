@@ -96,10 +96,10 @@ main{
     flex-direction: column;
 }
 
-.p1{background-image: url(../img/home/p1.JPG);}
-.p2{background-image: url(../img/home/p2.JPG);}
-.p3{background-image: url(../img/home/p3.png);}
-.p4{background-image: url(../img/home/p4.png);}
+.p1{background-image: url(../img/home/p1.webp);}
+.p2{background-image: url(../img/home/p2.webp);}
+.p3{background-image: url(../img/home/p3.webp);}
+.p4{background-image: url(../img/home/p4.webp);}
 
 .is-large{
     font-size: 10vw;

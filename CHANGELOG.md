@@ -135,19 +135,18 @@
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
 
-## [1.1.7] - 2025-08-16
+## [1.1.8] - 2025-08-16
 
 ### Added
 
-- 首页的内容（补全了第二个section，包括简介和图文）
+- Nothing
 
 ### Changed
 
-- home.html
 - p1 p2 p3 p4
 
 ### Fixed
 
-- Nothing
+- 使用webp替换原来的格式
 
 <!-- ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
